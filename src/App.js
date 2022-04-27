@@ -5,6 +5,7 @@ import { exportComponentAsJPEG,
   exportComponentAsPNG } from 'react-component-export-image';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Form from './Components/Form';
 
 export class App extends React.Component {
   constructor (props) {
@@ -15,6 +16,7 @@ export class App extends React.Component {
   render () {
     return (
       <>
+        <Form />
         <div ref={this.componentRef}>
           <h2>Hello World</h2>
         </div>

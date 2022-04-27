@@ -60,6 +60,12 @@
       "error",
       2
     ],
-    "space-before-function-paren": [2, "always"]
+    "space-before-function-paren": [2, "always"],
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/label-has-for": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }]
   }
 }
