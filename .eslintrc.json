@@ -1,37 +1,65 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "prettier",
+    "airbnb"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "prettier",
-        "airbnb"
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+    // allow jsx syntax in js files (for next.js project)
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "prettier"
+    //should add ".ts" if typescript project
+    "prettier/prettier": "warn",
+    "comma-dangle": [
+      2,
+      "always-multiline"
     ],
-    "rules": {
-        // suppress errors for missing 'import React' in files
-        "react/react-in-jsx-scope": "off",
-        // allow jsx syntax in js files (for next.js project)
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
-        "prettier/prettier": "error",
-        "no-unused-vars": "warn",
-        "no-console": "off",
-        "func-names": "off",
-        "no-process-exit": "off",
-        "object-shorthand": "off",
-        "class-methods-use-this": "off"
-    }
+    "object-curly-newline": [
+      "error",
+      "never"
+    ],
+    "indent": "off",
+    "react/prefer-stateless-function": [
+      2,
+      {
+        "ignorePureComponents": false
+      }
+    ],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "max-classes-per-file": [
+      "error",
+      2
+    ],
+    "space-before-function-paren": [2, "always"]
+  }
 }

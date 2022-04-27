@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { exportComponentAsJPEG,
+  exportComponentAsPDF,
+  exportComponentAsPNG } from 'react-component-export-image';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.Component {
+  constructor (props) {
+    super(props);
+    this.componentRef = React.createRef();
+  }
+
+  render () {
+    return (
+      <>
+        <div ref={this.componentRef}>
+          <h2>Hello World</h2>
+        </div>
+        <Stack spacing={2} direction="row">
+          <Button variant="contained" onClick={() => exportComponentAsPNG(this.componentRef)}>PNG</Button>
+          <Button variant="contained" onClick={() => exportComponentAsPDF(this.componentRef)}>PDF</Button>
+          <Button variant="contained" onClick={() => exportComponentAsJPEG(this.componentRef)}>JPEG</Button>
+        </Stack>
+      </>
+    );
+  }
 }
 
 export default App;
