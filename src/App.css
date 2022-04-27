@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+    margin-top: 2em
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.upper-layer {
+    width: 200px;
+    height: 100px;
+    position:absolute;
+    right: 500px;
+    bottom: 200px;
+}
