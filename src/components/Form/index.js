@@ -14,7 +14,7 @@ export default function FormName (props) {
   // console.log(watch('example')); // watch input value by passing the name of it
   return (
     <form className="box-input" onSubmit={handleSubmit(onSubmit)}>
-      <TextField label="First Name" variant="outlined" id="firstName" type="text" {...register('firstName', { required: true, maxLength: 50 })} />
+      <TextField label="Name" variant="outlined" id="firstName" type="text" {...register('firstName', { required: true, maxLength: 50 })} />
       <Button variant="contained" type="submit" color="secondary">submit</Button>
     </form>
   );

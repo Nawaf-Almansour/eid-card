@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(./assets/font/GE-SS-Unique-Bold.otf) format('woff');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
 .App {
   text-align: center;
 }
@@ -38,20 +45,40 @@
 }
 
 .container{
-    margin-top: 2em
+    margin-top: 2em;
+    font-family: MyFont, Arial, serif;
+    background-color: rgba(221, 220, 205, 0.11);
 }
 
+.box{
+    padding-top: 1em;
+    width: 300px;
+    position: relative;
+}
 .title {
-    font-size: 24px;
+    font-size: 13px;
     font-weight: bold;
-    font-family: sans-serif;
-    color: aliceblue;
+    color: #3D4C34;
+    font-family: MyFont, sans-serif;
+    padding-right: 0.2em;
+    padding-left: 0.1em;
 }
 
 .upper-layer {
-    width: 200px;
+    width: 140px;
     height: 100px;
     position:absolute;
-    right: 500px;
-    bottom: 200px;
+    right: 78px;
+    bottom: 115px;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 300px;
+}
+
+button {
+    background-color: #3D4C34 !important;
 }
